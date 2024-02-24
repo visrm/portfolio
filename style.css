@@ -102,6 +102,7 @@ content: "";
 }
 
 .avatar > img {
+  position: relative;
   max-height: 10em;
   border-radius: 5.2em;
 }
