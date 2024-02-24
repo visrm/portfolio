@@ -77,32 +77,25 @@ nav {
   align-items: center;
 }
 
-.avatar::before {
-  content: "";
-  position: absolute;
+.avatar::after,.avatar::before {
+content: "";
+  position: relative;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
   border-radius: 5em;
+  background: linear-gradient(235deg, #2c23ff, #ff00e9);
+}
+
+.avatar::before {
   filter: blur(5px);
   z-index: -1;
 }
 
 .avatar::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 5em;
   filter: blur(25px);
   z-index: -2;
-}
-
-.avatar::after,.avatar::before {
-  background: linear-gradient(235deg, #2c23ff, #ff00e9);
 }
 
 .avatar > img {
