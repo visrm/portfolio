@@ -64,6 +64,7 @@ nav {
   position: relative;
   display: flex;
   clear: left;
+  text-align: center;
 }
 
 .avatar {
@@ -100,7 +101,6 @@ content: "";
 }
 
 .avatar > img {
-  position: relative;
   max-height: 10em;
   border-radius: 5.2em;
 }
