@@ -5,16 +5,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Rahul Murali | Masters of Computer Applications Student</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" src="./scripts/tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          sm: '480px',
+          md: '768px',
+          lg: '976px',
+          xl: '1440px',
+        },
+        fontFamily: {
+          sans: ['Graphik', 'sans-serif'],
+          serif: ['Merriweather', 'serif'],
+        },
+        extend: {
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles\cards.css">
 </head>
 
-<body class="h-full bg-no-repeat bg-cover"
+<body class="h-full w-full bg-no-repeat bg-cover"
   style="background-image: url(https://images.unsplash.com/photo-1531824475211-72594993ce2a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
 
   <!-- Navigation bar -->
   <nav
-    class="flex px-5 pt-4 pb-8 sticky mb-2 top-0 left-0 bg-black/10 w-full items-center justify-between backdrop-blur backdrop-brightness-125 ease-out duration-300 text-white text-base shadow shadow-black/50">
+    class="flex px-5 pt-4 pb-8 sticky mb-2 top-0 left-0 z-20 bg-black/10 w-full items-center justify-between backdrop-blur backdrop-brightness-125 ease-out duration-300 text-white text-base shadow shadow-black/50">
     <p class="mx-4 p-2 text-center text-4xl font-bold tracking-wide">Portfolio</p>
     <ul class="flex mx-4 flex-row flex-nowrap list-none">
       <li class="mx-2 px-4 py-2 basis-1/4 "><a href="#about">About</a></li>
@@ -26,24 +46,59 @@
 
   <!-- Profile Details Card -->
   <div
-    class="flex m-2 p-2 min-h-[500px] w-1/3 rounded-2xl bg-white border shadow-black hover:shadow-xl place-items-center flex-col">
-    <figure class="flex m-2 p-2 bg-white items-center place-content-center">
+    class="container ml-auto mr-auto mt-6 mb-8 px-2 pt-2 pb-1 min-h-[480px] w-5/12 rounded-2xl bg-white border shadow-black hover:shadow-xl flex-col hover:z-10">
+    <figure class="flex mx-2 p-2 bg-transparent items-center place-content-center overflow-hidden">
       <img class="max-h-32 rounded-full bg-contain  border border-white shadow-black" src="./assets/user_profile.jpg"
         alt="PROFILE PICTURE" />
       <figcaption class="block m-2 p-2 font-semibold text-xl w-1/2">
         Rahul Murali
         <span class="text-xs font-normal"><i>He/Him</i></span>
-        <span class="block p-0 m-0 font-normal text-base">Computer Applications Student at Calicut University</span>
+        <span class="block p-0 m-0 font-normal text-base">Computer Applications Student at
+          <wbr>Calicut University</span>
       </figcaption>
-    </figure>
-    <div class="container w-11/12 clear-left mx-4 p-2 bg-slate-400">
-      <h3 id="about">About me</h3>
-      <p>description</p>
+    </figure><hr>
+    <div class="container mr-auto ml-auto w-full mx-2 px-5 py-2 bg-transparent ">
+      <h3 id="about" class="underline underline-offset-4 font-medium">About me</h3>
+      <p class="container p-1 first-letter:capitalize first-letter:text-2xl h-full tracking-wide">Lorem ipsum dolor, sit
+        amet consectetur
+        adipisicing elit. Illum fugiat atque repellat non harum iste deleniti vero. Reprehenderit dolorum, adipisci eos
+        reiciendis est velit, quidem ratione quis magni sit dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus quos nostrum iusto placeat? Facere,
+        consectetur, earum assumenda aperiam, magni vitae repellendus nisi quasi mollitia non fugiat eos aliquam illum!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, qui voluptatibus. Sit officiis fugit
+        accusamus modi, fugiat veniam vero voluptatem velit fuga. Reprehenderit non, officiis blanditiis ratione autem
+        quaerat velit!</p>
     </div>
   </div>
 
   <!-- Projects link -->
-  <div id="link"></div>
+  <div id="project-bg" class="flex justify-evenly flex-row flex-nowrap w-full min-h-[360px] my-10 py-4 px-4">
+    <div class="button flex z-10"></div>
+    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+      <figure class="cards-fig">
+        <img src="assets/2.jpg" alt="Project thumbnail">
+      </figure><hr>
+      <p class="cards-desc">description</p>
+    </div>
+    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+      <figure class="cards-fig">
+        <img src="assets/2.jpg" alt="Project thumbnail">
+      </figure><hr>
+      <p class="cards-desc">description</p>
+    </div>
+    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+      <figure class="cards-fig">
+        <img src="assets/2.jpg" alt="Project thumbnail">
+      </figure><hr>
+      <p class="cards-desc">description</p>
+    </div>
+    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+      <figure class="cards-fig">
+        <img src="assets/2.jpg" alt="Project thumbnail">
+      </figure><hr>
+      <p class="cards-desc">description</p>
+    </div>
+  </div>
 
   <!-- Skillset -->
   <div></div>
@@ -54,12 +109,14 @@
   <!-- Educational Qualifications -->
   <div></div>
 
-  <!-- Career Goals -->
+  <!-- Contacts -->
   <div></div>
 
   <!--footer-->
-  <div></div>
-  
+  <div class="flex py-1 bg-white">
+    <p class="block mr-auto ml-auto ">© Copyright 2024 Rahul Murali</p>
+  </div>
+
 </body>
 
 </html>

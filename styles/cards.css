@@ -1,0 +1,41 @@
+#project-bg {
+    background-color: #9F8170;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards>hr{
+    margin-top: 0.75rem;
+}
+
+
+.cards:hover {
+    background-color: #A67B5B;
+    font-weight: 600;
+    -webkit-box-shadow: 2px 5px 24px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 5px 24px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 5px 24px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cards-fig {
+    display: flex;
+    height: 75%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.cards-desc {
+    display: flex;
+    padding-top: 0.2rem;
+    padding-right: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.25rem;
+    margin: 0.25rem;
+    color: white;
+    font-stretch: semi-expanded;
+    font-weight: 500;
+    text-transform: capitalize;
+}
