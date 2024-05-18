@@ -1,5 +1,5 @@
 {
-  "name": "homepage",
+  "name": "portfolio",
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "dependencies": {
@@ -98,5 +98,8 @@
   "description": "Portfolio website 0f Rahul Murali.",
   "devDependencies": {
     "tailwindcss": "^3.4.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
