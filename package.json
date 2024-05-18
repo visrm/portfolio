@@ -96,9 +96,6 @@
   "author": "Rahul Murali yveltal4286@gmail.com",
   "license": "UNLICENSED",
   "description": "",
-  "scripts": {
-    "build": "npm install tailwindcss && npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch"
-  },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
   }
