@@ -5,136 +5,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Rahul Murali | Masters of Computer Applications Student</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        screens: {
-          sm: '480px',
-          md: '768px',
-          lg: '976px',
-          xl: '1440px',
-        },
-        fontFamily: {
-          sans: ['Graphik', 'sans-serif'],
-          serif: ['Merriweather', 'serif'],
-        },
-        extend: {
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="styles\cards.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles\main.css">
 </head>
 
-<body class="h-full w-full bg-no-repeat bg-cover"
+<body class="min-h-full w-full bg-no-repeat bg-cover sm:overflow-x-hidden bg-white"
   style="background-image: url(https://images.unsplash.com/photo-1531824475211-72594993ce2a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
 
   <!-- Navigation bar -->
   <nav
-    class="flex px-5 pt-4 pb-8 sticky mb-2 top-0 left-0 z-20 bg-black/10 w-full items-center justify-between backdrop-blur backdrop-brightness-125 ease-out duration-300 text-white text-base shadow shadow-black/50">
-    <p class="mx-4 p-2 text-center text-4xl font-bold tracking-wide">Portfolio</p>
+    class="flex flex-row flex-nowrap pb-8 pt-4 sticky mb-2 top-0 left-0 bg-black/10 w-full items-center justify-between backdrop-blur backdrop-brightness-125 ease-out duration-300 text-white shadow shadow-black/50">
+    <p class="flex px-4 mx-2 text-center text-4xl font-bold tracking-wide">Portfolio</p>
     <ul class="flex mx-4 flex-row flex-nowrap list-none">
-      <li class="mx-2 px-4 py-2 basis-1/4 "><a href="#about">About</a></li>
-      <li class="mx-2 px-4 py-2 basis-1/4 "><a href="#">Projects</a></li>
-      <li class="mx-2 px-4 py-2 basis-1/4 "><a href="#">News</a></li>
-      <li class="mx-2 px-4 py-2 basis-1/4 "><a href="#">Contact</a></li>
+      <li class="sm:mx-2 px-4 py-2 basis-1/3 font-semibold sm:text-lg text-base"><a href="#project-bg">Projects</a></li>
+      <li class="sm:mx-2 px-4 py-2 basis-1/3 font-semibold sm:text-lg text-base"><a href="#">News</a></li>
+      <li class="sm:mx-2 px-4 py-2 basis-1/3 font-semibold sm:text-lg text-base"><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
+
   <!-- Profile Details Card -->
   <div
-    class="container ml-auto mr-auto mt-6 mb-8 px-2 pt-2 pb-1 min-h-[480px] w-5/12 rounded-2xl bg-white border shadow-black hover:shadow-xl flex-col hover:z-10">
-    <figure class="flex mx-2 p-2 bg-transparent items-center place-content-center overflow-hidden">
+    class="block ml-auto mr-auto my-10 px-2 pt-2 pb-1 min-h-16 sm:min-h-96 w-3/5 sm:w-5/12 rounded-2xl bg-white border shadow-black hover:shadow-2xl">
+    <figure class="flex mx-2 p-2 bg-transparent items-center place-content-center overflow-hidden flex-col sm:flex-row">
       <img class="max-h-32 rounded-full bg-contain  border border-white shadow-black" src="./assets/user_profile.jpg"
         alt="PROFILE PICTURE" />
-      <figcaption class="block m-2 p-2 font-semibold text-xl w-1/2">
+      <figcaption class="block m-0 sm:m-2 p-2 font-semibold text-base sm:text-xl sm:w-1/2">
         Rahul Murali
-        <span class="text-xs font-normal"><i>He/Him</i></span>
-        <span class="block p-0 m-0 font-normal text-base">Computer Applications Student at
+        <span class="poppins-regular text-xs sm:text-xs font-normal"><i>He/Him</i></span>
+        <span class="block p-0 m-0 font-normal text-sm sm:text-base tracking-wide">Computer Applications Student at
           <wbr>Calicut University</span>
       </figcaption>
     </figure>
     <hr>
-    <div class="container mr-auto ml-auto w-full mx-2 px-5 py-2 bg-transparent ">
-      <h3 id="about" class="underline underline-offset-4 font-medium">About me</h3>
-      <p class="container p-1 first-letter:capitalize first-letter:text-2xl h-full tracking-wide">Lorem ipsum dolor, sit
-        amet consectetur
-        adipisicing elit. Illum fugiat atque repellat non harum iste deleniti vero. Reprehenderit dolorum, adipisci eos
-        reiciendis est velit, quidem ratione quis magni sit dolorem.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ducimus quos nostrum iusto placeat? Facere,
-        consectetur, earum assumenda aperiam, magni vitae repellendus nisi quasi mollitia non fugiat eos aliquam illum!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, qui voluptatibus. Sit officiis fugit
-        accusamus modi, fugiat veniam vero voluptatem velit fuga. Reprehenderit non, officiis blanditiis ratione autem
-        quaerat velit!</p>
+    <div class="container mr-auto ml-auto sm:mx-2 px-5 py-2 bg-transparent ">
+      <h3 class="underline underline-offset-4 font-medium">About me</h3>
+      <p class="container p-1 h-full tracking-wide italic"> Rahul Murali is a recent graduate with a degree in
+        Mathematics and a passion for software development.
+      </p>
     </div>
   </div>
 
-  <!-- Projects link -->
-  <div id="project-bg" class="flex justify-evenly flex-row flex-nowrap w-full min-h-[360px] my-10 py-4 px-4">
-    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+
+  <!-- Projects featured section -->
+  <div id="project-bg" class="sm:p-4 py-4 overflow-hidden">
+    <div class="cards mx-2 sm:m-2 sm:min-h-[360px] flex bg-transparent p-2 rounded-2xl basis-4/12 sm:basis-3/12 grow-0">
       <figure class="cards-fig">
         <img src="assets/weather-app-thumb.jpg" alt="Project thumbnail">
       </figure>
       <hr>
       <div>
-        <p class="cards-desc">
+        <p class="cards-desc sm:text-base">
           A simple Javascript Weather Forecaster.
-        </p><button class="cards-button" role="button"><a href="https://weather-application-nine-theta.vercel.app/"
-            target="_blank">click
-            here</a></button>
+        </p><button class="cards-button sm:text-sm" role="button"><a
+            href="https://weather-application-nine-theta.vercel.app/" target="_blank">visit</a></button>
       </div>
     </div>
-    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+    <div class="cards mx-2 sm:m-2 sm:min-h-[360px] flex bg-transparent p-2 rounded-2xl basis-4/12 sm:basis-3/12 grow-0">
       <figure class="cards-fig">
         <img src="assets/temperature-anomaly-thumb.png" alt="Project thumbnail" style="background-color: white;">
       </figure>
       <hr>
       <div>
-        <p class="cards-desc">
+        <p class="cards-desc sm:text-base">
           A simple webpage displaying temeperature anomalies.
-        </p><button class="cards-button" role="button"><a href="http://temp-anomalies-graph.vercel.app/"
-            target="_blank">click here</a></button>
+        </p><button class="cards-button sm:text-sm" role="button"><a href="http://temp-anomalies-graph.vercel.app/"
+            target="_blank">visit</a></button>
       </div>
     </div>
-    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+    <div class="cards mx-2 sm:m-2 sm:min-h-[360px] flex bg-transparent p-2 rounded-2xl basis-4/12 sm:basis-3/12 grow-0">
       <figure class="cards-fig">
         <img src="assets/digilocker-guide-thumb.png" alt="Project thumbnail">
       </figure>
       <hr>
       <div>
-        <p class="cards-desc">
+        <p class="cards-desc sm:text-base">
           A beginner digiLocker guide webpage.
-        </p><button class="cards-button" role="button"><a href="https://digilocker-guide.vercel.app/"
-            target="_blank">click here</a></button>
+        </p><button class="cards-button sm:text-sm" role="button"><a href="https://digilocker-guide.vercel.app/"
+            target="_blank">visit</a></button>
       </div>
     </div>
-    <div class="cards flex bg-transparent p-2 rounded-2xl basis-3/12 grow-0 mx-2">
+    <div class="cards mx-2 sm:m-2 sm:min-h-[360px] hidden sm:flex bg-transparent p-2 rounded-2xl sm:basis-3/12 grow-0">
       <figure class="cards-fig">
         <img src="assets/C-Assignments-thumb.png" alt="Project thumbnail">
       </figure>
       <hr>
       <div>
-        <p class="cards-desc">
+        <p class="cards-desc sm:text-base">
           list of basic C programs for uni CS purpose.
-        </p><button class="cards-button" role="button"><a href="https://github.com/visrm/C-Assignments" target="_blank" >click here</a></button>
+        </p><button class="cards-button sm:text-sm" role="button"><a href="https://github.com/visrm/C-Assignments"
+            target="_blank">visit</a></button>
       </div>
     </div>
   </div>
 
   <!-- Skillset -->
-  <div></div>
+
 
   <!-- Work Experience -->
-  <div></div>
 
-  <!-- Educational Qualifications -->
-  <div></div>
 
-  <!-- Contacts -->
-  <div></div>
+
+  <!-- Educational Qualifications section -->
+  <div class="grid bg-white px-4 pt-2 sm:pt-4 pb-4 sm:pb-8 place-content-center mx-0">
+    <h2 class="py-2 text-lg sm:text-xl font-semibold underline underline-offset-4 tracking-wide uppercase">Educational
+      Qualifications</h2>
+    <div>
+      <p class="px-1 text-base sm:text-lg font-medium font-serif">University of Calicut</p>
+      <p class="px-1 py-0 text-sm sm:text-base font-sans">Bachelor of Science, Mathematics
+        <span class="flex clear-left text-xs sm:text-sm text-black/75">2020 - 23</span>
+      </p>
+    </div>
+    <div>
+      <p class="px-1 text-base sm:text-lg font-medium font-serif">University of Calicut</p>
+      <p class="px-1 py-0 text-sm sm:text-base font-sans">Master of Computer Applications, IT
+        <span class="flex clear-left text-xs sm:text-sm text-black/75">2023 - present</span>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Contacts section -->
+  <div class="contacts flex px-3 sm:px-4 py-4 flex-row flex-nowrap align-middle justify-evenly">
+    <h2 id="contact"
+      class="p-2 sm:text-xl font-semibold underline underline-offset-4 sm:tracking-wide uppercase clear-right">
+      Contacts:
+    </h2>
+    <a href="mailto:yveltal4286@gmail.com" rel="noopener noreferrer">
+      <div class="icons8-gmail"></div>
+    </a>
+    <a href="https://www.linkedin.com/in/rahulmurali852/" target="_blank" rel="noopener noreferrer">
+      <div class="icons8-linkedin"></div>
+    </a>
+    <a href="https://www.instagram.com/crescent.rahul/ " target="_blank" rel="noopener noreferrer">
+      <div class="icons8-instagram"></div>
+    </a>
+    <a href="https://discord.com/invite/Sd3KQMMGtb" target="_blank" rel="noopener noreferrer">
+      <div class="icons8-discord"></div>
+    </a>
+    <a href="https://github.com/visrm/" target="_blank" rel="noopener noreferrer">
+      <div class="icons8-github"></div>
+    </a>
+    <a href="https://pinterest.com/vyali09/" target="_blank" rel="noopener noreferrer">
+      <div class="icons8-pinterest"></div>
+    </a>
+  </div>
+
 
   <!--footer-->
   <div class="flex py-1 bg-white">
