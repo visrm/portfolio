@@ -28,3 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    const x = document.getElementById("menu-btn");
+    document.getElementById("dropdown-cont").style.opacity = 0;
+    if (x) {
+        const listener = x.addEventListener('click', function () {
+            document.getElementById("menu-btn").style.opacity = 1;
+            document.getElementById("dropdown-cont").style.opacity = 1;
+
+        });
+    }
+    else console.log("error");
+});
+
+
+
