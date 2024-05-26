@@ -2,67 +2,65 @@ body {
   position: relative;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-repeat: repeat-x;
-  background-size: contain;
+  background-size: cover;
   background: url("../assets/body-bgi.png");
 }
 
-/* Navbar CSS */
+h1,
+h2,
+h3,
+h4 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 
-nav {
-  font-family: Arial, Helvetica, sans-serif;
+/* Header CSS */
+
+header {
+  position: absolute;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   z-index: 1000;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.25rem;
 }
 
-@keyframes appear {
-  0% {
+@keyframes fade-in {
+  from {
     opacity: 0;
   }
-
-  50% {
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  from {
     opacity: 0;
   }
-
-  100% {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
 
-@-moz-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.fade-on-scroll {
+  opacity: 0; /* Initially hidden */
+  animation: fade-in 0.5s ease-out;
 }
 
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.fade-on-scroll.in-view {
+  opacity: 1;
 }
 
-.scroll-animate {
-  animation: appear 3s linear;
-}
-
-/* Navbar button CSS */
+/* Header button CSS */
 .menu-button {
-  padding: 15px;
+  padding: 14px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -72,10 +70,12 @@ nav {
 }
 
 /* Profile card CSS */
-.profile-card {
-  background-image: url("https://i.pinimg.com/564x/54/3d/e8/543de8a1f2887da54f7b7de6772f6aa2.jpg");
+.hero {
+  background-image: url("../assets/profile-card-bg.svg");
   overflow: hidden;
   background-size: contain;
+  background-blend-mode: darken;
+  border: 2px solid #0d1717;
 }
 
 /* Cards container CSS */
@@ -88,7 +88,7 @@ nav {
   width: 100%;
   margin-top: 2.5em;
   margin-bottom: 2.5em;
-  z-index: -10;
+  z-index: -1;
 }
 
 /* Cards CSS */
@@ -99,59 +99,60 @@ nav {
 .cards {
   display: flex;
   position: relative;
+  background-color: #0d1717bf;
+  background-image: url("../assets/proj-bg.png");
+  background-size: cover;
+  background-blend-mode: luminosity;
+  height: 180px;
+  padding-top: 0.025rem;
   flex-direction: column;
-  justify-content: space-around;
-  height: 240px;
-  background-image: url("../assets/dots-bg.png");
-  background-repeat: repeat-x;
-  background-size: contain;
-  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  overflow: hidden;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
   -webkit-box-shadow: 10px 5px 24px -5px #000000;
   -moz-box-shadow: 10px 5px 24px -5px #000000;
   box-shadow: 10px 5px 24px -5px #000000;
   transition: all 2s linear 100ms;
-  z-index: 1;
+  z-index: 10;
 }
 
 .cards::after {
   opacity: 1;
 }
 
-.cards > hr {
-  margin-top: 0.1rem;
-}
-
 .cards > div {
   display: flex;
   position: relative;
+  height: 40%;
   flex-direction: column;
-  flex-wrap: nowrap;
   align-items: center;
+  flex-wrap: nowrap;
   clear: left;
+  padding: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 /* Cards thumbnail CSS */
 
 .cards-fig {
   display: flex;
-  height: 60%;
   overflow: hidden;
+  height: 100%;
+  margin: 0.75rem;
   border-radius: inherit;
 }
 
 .cards-fig > img {
+  contain: content;
   overflow: hidden;
-  border-radius: inherit;
+  width: 100%;
+  height: 100%;
 }
 
 .cards-desc {
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 0.2rem;
   padding-right: 0.25rem;
-  padding-bottom: 0.25rem;
   padding-left: 0.25rem;
   margin: 0.25rem;
   color: white;
@@ -159,12 +160,13 @@ nav {
   font-weight: 500;
   font-size: normal;
   text-transform: capitalize;
-  height: 100%;
 }
 
 /* Cards button CSS */
 
 .cards-button {
+  display: flex;
+  margin: 4px;
   position: relative;
   align-items: center;
   appearance: none;
@@ -174,7 +176,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   box-sizing: border-box;
-  color: #3c4043;
+  color: #0d1717;
   cursor: pointer;
   display: inline-flex;
   fill: currentcolor;
@@ -240,13 +242,24 @@ nav {
     rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
 
+/* Skills CSS */
+
+.tech-skills {
+  color: #ffffff;
+  background-color: #0d1717;
+  background-image: url("../assets/tech-skill-bg.jpg");
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
 /* Contacts CSS */
 
 .contacts {
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  background-color: #d4d4d4;
+  color: #000000;
+  background-color: #616161;
   font-family: Arial, Helvetica, sans-serif;
+  border: 0.1rem solid black;
 }
 
 .icons8-instagram {
@@ -355,4 +368,8 @@ nav {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCI+CiAgICA8cGF0aCBkPSJNMTcuNzkxLDQ2LjgzNkMxOC41MDIsNDYuNTMsMTksNDUuODIzLDE5LDQ1di01LjRjMC0wLjE5NywwLjAxNi0wLjQwMiwwLjA0MS0wLjYxQzE5LjAyNywzOC45OTQsMTkuMDE0LDM4Ljk5NywxOSwzOSBjMCwwLTMsMC0zLjYsMGMtMS41LDAtMi44LTAuNi0zLjQtMS44Yy0wLjctMS4zLTEtMy41LTIuOC00LjdDOC45LDMyLjMsOS4xLDMyLDkuNywzMmMwLjYsMC4xLDEuOSwwLjksMi43LDJjMC45LDEuMSwxLjgsMiwzLjQsMiBjMi40ODcsMCwzLjgyLTAuMTI1LDQuNjIyLTAuNTU1QzIxLjM1NiwzNC4wNTYsMjIuNjQ5LDMzLDI0LDMzdi0wLjAyNWMtNS42NjgtMC4xODItOS4yODktMi4wNjYtMTAuOTc1LTQuOTc1IGMtMy42NjUsMC4wNDItNi44NTYsMC40MDUtOC42NzcsMC43MDdjLTAuMDU4LTAuMzI3LTAuMTA4LTAuNjU2LTAuMTUxLTAuOTg3YzEuNzk3LTAuMjk2LDQuODQzLTAuNjQ3LDguMzQ1LTAuNzE0IGMtMC4xMTItMC4yNzYtMC4yMDktMC41NTktMC4yOTEtMC44NDljLTMuNTExLTAuMTc4LTYuNTQxLTAuMDM5LTguMTg3LDAuMDk3Yy0wLjAyLTAuMzMyLTAuMDQ3LTAuNjYzLTAuMDUxLTAuOTk5IGMxLjY0OS0wLjEzNSw0LjU5Ny0wLjI3LDguMDE4LTAuMTExYy0wLjA3OS0wLjUtMC4xMy0xLjAxMS0wLjEzLTEuNTQzYzAtMS43LDAuNi0zLjUsMS43LTVjLTAuNS0xLjctMS4yLTUuMywwLjItNi42IGMyLjcsMCw0LjYsMS4zLDUuNSwyLjFDMjEsMTMuNCwyMi45LDEzLDI1LDEzczQsMC40LDUuNiwxLjFjMC45LTAuOCwyLjgtMi4xLDUuNS0yLjFjMS41LDEuNCwwLjcsNSwwLjIsNi42YzEuMSwxLjUsMS43LDMuMiwxLjYsNSBjMCwwLjQ4NC0wLjA0NSwwLjk1MS0wLjExLDEuNDA5YzMuNDk5LTAuMTcyLDYuNTI3LTAuMDM0LDguMjA0LDAuMTAyYy0wLjAwMiwwLjMzNy0wLjAzMywwLjY2Ni0wLjA1MSwwLjk5OSBjLTEuNjcxLTAuMTM4LTQuNzc1LTAuMjgtOC4zNTktMC4wODljLTAuMDg5LDAuMzM2LTAuMTk3LDAuNjYzLTAuMzI1LDAuOThjMy41NDYsMC4wNDYsNi42NjUsMC4zODksOC41NDgsMC42ODkgYy0wLjA0MywwLjMzMi0wLjA5MywwLjY2MS0wLjE1MSwwLjk4N2MtMS45MTItMC4zMDYtNS4xNzEtMC42NjQtOC44NzktMC42ODJDMzUuMTEyLDMwLjg3MywzMS41NTcsMzIuNzUsMjYsMzIuOTY5VjMzIGMyLjYsMCw1LDMuOSw1LDYuNlY0NWMwLDAuODIzLDAuNDk4LDEuNTMsMS4yMDksMS44MzZDNDEuMzcsNDMuODA0LDQ4LDM1LjE2NCw0OCwyNUM0OCwxMi4zMTgsMzcuNjgzLDIsMjUsMlMyLDEyLjMxOCwyLDI1IEMyLDM1LjE2NCw4LjYzLDQzLjgwNCwxNy43OTEsNDYuODM2eiI+PC9wYXRoPgo8L3N2Zz4=")
     50% 50% no-repeat;
   background-size: 100%;
+}
+
+footer {
+  border: 0.1rem solid black;
 }

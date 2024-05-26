@@ -5,35 +5,41 @@
 
 // Checks If the document is loaded before the script is placed in the <head>
 document.addEventListener("DOMContentLoaded", () => {
-  // Register IntersectionObserver
-  const Intersection_observer = new IntersectionObserver((entries) => {
+  // Create a new IntersectionObserver instance
+  const observer = new IntersectionObserver((entries) => {
+    // Loop through each entry (element being observed)
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Add 'in-view' class if observation target is inside viewport
-        entry.target.classList.add("in-view");
-      } else {
-        // Remove 'in-view' class otherwise
-        entry.target.classList.remove("in-view");
-      }
+      // Toggle the 'in-view' class based on the visibility of the element
+      entry.target.classList.toggle("in-view", entry.isIntersecting);
     });
   });
 
-  // Declares what to observe, and observes its properties.
-  const allAnimateElements = document.querySelectorAll(".scroll-animate");
+  // Get all elements with the 'fade-on-scroll' class
+  const fadeElements = document.querySelectorAll(".fade-on-scroll");
 
-  // Adds observer to each of those elemnts.
-  allAnimateElements.forEach((element) => {
-    Intersection_observer.observe(element);
-  });
+  // Observe each 'fade-on-scroll' element using the IntersectionObserver
+  fadeElements.forEach((element) => observer.observe(element));
 });
 
+// Dropdown Menu
 window.addEventListener("DOMContentLoaded", () => {
-  const x = document.getElementById("menu-btn");
-  document.getElementById("dropdown-cont").style.opacity = 0;
-  if (x) {
-    const listener = x.addEventListener("click", function () {
-      document.getElementById("menu-btn").style.opacity = 1;
-      document.getElementById("dropdown-cont").style.opacity = 1;
+  // Get the menu button and dropdown container elements
+  const menuBtn = document.getElementById("menu-btn");
+  const dropdownCont = document.getElementById("dropdown-cont");
+
+  // Check if both elements exist
+  if (menuBtn && dropdownCont) {
+    // Set the initial opacity of the dropdown container to 0 (hidden)
+    dropdownCont.style.opacity = 0;
+
+    // Add a click event listener to the menu button
+    menuBtn.addEventListener("click", () => {
+      // Set the opacity of the menu button and dropdown container to 1 (visible)
+      menuBtn.style.opacity = 1;
+      dropdownCont.style.opacity = 1;
     });
-  } else console.log("error");
+  } else {
+    // Log an error message if either element is not found
+    console.log("Error: menu-btn or dropdown-cont not found");
+  }
 });
