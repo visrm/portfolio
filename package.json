@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "main": "tailwind.config.js",
+  "main": "index.html",
   "dependencies": {
     "ansi-regex": "^6.0.1",
     "ansi-styles": "^6.2.1",
@@ -97,9 +97,7 @@
   "license": "UNLICENSED",
   "description": "Portfolio website 0f Rahul Murali.",
   "devDependencies": {
+    "daisyui": "^4.11.1",
     "tailwindcss": "^3.4.3"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
