@@ -1,3 +1,4 @@
+
 // Usage:
 // 1. Add scroll-animate class to animatable HTML elements.
 // 2. Once visible in viewport, this JS will add the 'in-view' class to those elements.

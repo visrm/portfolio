@@ -16,7 +16,7 @@
 
   <!-- Header -->
   <header
-    class="m-0 p-1 flex flex-row flex-nowrap fixed top-0 left-0 w-full items-center justify-between bg-black/10 backdrop-blur backdrop-brightness-125 ease-out duration-300 text-white shadow shadow-black/50">
+    class="m-0 px-1 flex flex-row flex-nowrap fixed top-0 left-0 w-full items-center justify-between bg-black/10 backdrop-blur-md backdrop-brightness-125 ease-out duration-300 text-white shadow shadow-black/50">
     <p class="flex px-10 mx-2 text-center text-4xl font-bold tracking-wide">
       Portfolio
     </p>
@@ -57,7 +57,8 @@
 
   <main>
     <!-- Hero Card -->
-    <div class="hero min-h-screen bg-gray text-white bg-opacity-25">
+    <div class="hero min-h-screen bg-gray text-white">
+      <div class="hero-overlay bg-opacity-50"></div>
       <div class="hero-content flex-col lg:flex-row mr-auto ml-auto">
         <img src="assets/user_profile.jpg" class="max-w-sm w-2/5 rounded-full bg-contain shadow-black/50 shadow-2xl"
           alt="PROFILE PICTURE" />
@@ -128,49 +129,55 @@
 
     <!-- Skillset -->
     <div
-      class="tech-skills flex w-full h-full sm:min-h-full mb-6 sm:my-9 px-2 py-5 bg-white place-content-center bg-opacity-25">
+      class="skills flex w-full h-full sm:min-h-full mb-6 sm:my-9 px-2 py-5 bg-white place-content-center bg-opacity-25">
       <div class="flex flex-col flex-wrap px-2 pb-2 sm:pb-6 sm:px-4 w-6/12 bg-transparent rounded-xl">
         <h2
-          class="mr-auto ml-auto p-2 sm:p-4 text-2xl sm:text-2xl font-bold sm:tracking-wide uppercase underline underline-offset-4">
+          class="fade-on-scroll mr-auto ml-auto p-2 sm:p-4 text-2xl sm:text-2xl font-bold sm:tracking-wide uppercase underline underline-offset-4">
           Technical Skills</h2>
         <div>
-          <h3 class="p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+          <h3
+            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
             <span class="underline underline-offset-4">Front-End Development</span> | <span
               class="text-base no-underline uppercase font-semibold">HTML . CSS .
               Tailwind . bootstrap </span>
           </h3>
-          <p class="fade-on-scroll px-1 sm:px-2 sm:text-base text-sm font-sans tracking-wide">
+          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
             Proficient in HTML5, CSS (bootstrap, tailwind), and JavaScript
             for building user interfaces and interactive web experiences.
           </p>
-          <h3 class="p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+          <h3
+            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
             <span class="underline underline-offset-4">Back-End Development</span> | <span
               class="text-base no-underline uppercase font-semibold">React.js . Node.js . php </span>
           </h3>
-          <p class="fade-on-scroll px-1 sm:px-2 sm:text-base text-sm font-sans tracking-wide">
+          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
             Possessing a strong foundation in backend development principles and eager to learn and grow.
           </p>
-          <h3 class="p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+          <h3
+            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
             <span class="underline underline-offset-4">Programming Languages</span> | <span
               class="text-base no-underline uppercase font-semibold">C/C++ . Java .
               Python</span>
           </h3>
-          <p class="fade-on-scroll px-1 sm:px-2 sm:text-base text-sm font-sans tracking-wide">
+          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
             Strong understanding of programming fundamentals with experience in object-oriented (Java) and
             procedural (C) programming languages, allowing for efficient problem-solving and code maintainability.
           </p>
-          <h3 class="p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+          <h3
+            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
             <span class="underline underline-offset-4">Database Management</span> | <span
               class="text-base no-underline uppercase font-semibold">DBMS . SQL</span>
           </h3>
-          <p class="fade-on-scroll px-1 sm:px-2 sm:text-base text-sm font-sans tracking-wide">
+          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
             Possess a strong working knowledge of database design principles, data modeling, and querying using SQL.
           </p>
-          <h3 class="p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+          <h3
+            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
             <span class="underline underline-offset-4">Version Control</span> | <span
               class="text-base no-underline uppercase font-semibold">Git . Github</span>
           </h3>
-          <p class="fade-on-scroll px-1 sm:px-2 sm:text-base text-sm font-sans tracking-wide"> Experience with Git for
+          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide"> Experience
+            with Git for
             version control,
             collaboration and code management, including branching, merging, and
             conflict resolution.
@@ -182,11 +189,12 @@
 
     <!-- Educational Qualifications section -->
     <div class="grid bg-gray text-white px-4 pt-2 sm:pt-4 pb-4 sm:pb-8 place-content-center mx-0">
-      <h2 class="p-2 sm:p-2 text-xl sm:text-2xl font-semibold underline underline-offset-4 tracking-wide uppercase">
+      <h2
+        class="fade-on-scroll p-2 sm:p-2 text-xl sm:text-2xl font-semibold underline underline-offset-4 tracking-wide uppercase">
         Educational Qualifications
       </h2>
-      <div class="p-1 m-1">
-        <p class="px-2 text-base sm:text-xl font-medium font-serif">
+      <div class="fade-delay p-1 m-1 fade-on-scroll">
+        <p class="px-2 text-base sm:text-xl font-medium">
           University of Calicut
         </p>
         <p class="px-2 py-0 text-sm sm:text-lg font-sans">
@@ -194,8 +202,8 @@
           <span class="flex clear-left text-xs sm:text-sm text-white/75">2020 - 2023</span>
         </p>
       </div>
-      <div class="p-1 m-1">
-        <p class="px-2 text-base sm:text-xl font-medium font-serif ">
+      <div class="fade-delay p-1 m-1 fade-on-scroll">
+        <p class="px-2 text-base sm:text-xl font-medium">
           University of Calicut
         </p>
         <p class="px-2 py-0 text-sm sm:text-lg font-sans">
