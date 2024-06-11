@@ -28,7 +28,7 @@ h4 {
 
 header {
   position: absolute;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Manrope", sans-serif;
   z-index: 1000;
   margin: 0;
   padding: 0;
@@ -96,12 +96,9 @@ header {
 
 #project-bg {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   flex-wrap: nowrap;
   width: 100%;
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+  margin-block: 2.5em;
   z-index: -1;
 }
 
@@ -122,7 +119,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 600;
   -webkit-box-shadow: 10px 5px 24px -5px #000000;
   -moz-box-shadow: 10px 5px 24px -5px #000000;
@@ -169,7 +166,7 @@ header {
   padding-right: 0.25rem;
   padding-left: 0.25rem;
   margin: 0.25rem;
-  color: white;
+  color: #f0f0f0;
   font-stretch: semi-expanded;
   font-weight: 500;
   font-size: normal;
@@ -259,7 +256,7 @@ header {
 /* Skills CSS */
 
 .skills {
-  color: #ffffff;
+  color: #f0f0f0;
   background-color: #0d1717;
   background-image: url("../assets/tech-skill-bg.jpg");
   background-size: cover;
