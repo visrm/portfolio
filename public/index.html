@@ -12,22 +12,22 @@
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
 
-<body class="m-0 p-0 bg-no-repeat bg-cover h-full w-full">
+<body>
 
   <!-- Header -->
   <header
     class="m-0 px-1 flex flex-row flex-nowrap fixed top-0 left-0 w-full items-center justify-between bg-black/10 backdrop-blur-md backdrop-brightness-125 ease-out duration-300 text-white shadow shadow-black/50">
-    <p class="flex px-10 mx-2 text-center text-4xl font-bold tracking-wide">
+    <p class="flex px-4 sm:px-10 mx-2 text-center text-4xl font-bold tracking-wide">
       Portfolio
     </p>
-    <div class="dropdown dropdown-left flex flex-row flex-nowrap h-20 justify-evenly">
+    <nav class="dropdown dropdown-left flex flex-row flex-nowrap h-20 justify-evenly">
       <div tabindex="0" role="button" id="menu-btn" class="menu-button place-content-center px-1 mx-1">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
         </svg>
       </div>
       <ul tabindex="0" id="dropdown-cont"
-        class="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box w-52 mx-4 flex-col flex-nowrap list-none bg-white/80">
+        class="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box w-52 mx-4 flex-col flex-nowrap list-none">
         <li class="sm:mx-1 p-2 basis-1/2 font-semibold text-lg text-black/50">
           <a href="#project-bg">Projects</a>
         </li>
@@ -35,15 +35,16 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
 
   <main>
     <!-- Hero Card -->
-    <div class="hero min-h-screen bg-gray text-white">
-      <div class="hero-overlay bg-opacity-50"></div>
-      <div class="hero-content flex-col lg:flex-row mr-auto ml-auto">
-        <img src="./assets/user_profile.jpg" class="max-w-sm w-3/12 rounded-full bg-contain shadow-black/50 shadow-2xl"
+    <section class="hero min-h-screen text-base-200">
+      <div class="hero-overlay bg-opacity-10"></div>
+      <article class="hero-content flex-col lg:flex-row mr-auto ml-auto">
+        <img src="./assets/user_profile.jpg"
+          class="w-2/5 sm:w-3/12 mt-14 sm:mt-0 rounded-full bg-contain shadow-black/50 shadow-2xl"
           alt="PROFILE PICTURE" />
         <div class="p-1 sm:p-3">
           <h1 class="sm:text-5xl text-3xl font-bold"> Rahul Murali
@@ -51,7 +52,7 @@
             <span class="block font-normal text-base sm:text-2xl">Computer Applications Student at
               Calicut University</span>
           </h1>
-          <p class="flex fade-on-scroll py-6 text-sm sm:text-xl tracking-wide"> <!--A passionate software development enthusiast with a strong interest in
+          <p class="flex fade-on-scroll py-4 sm:py-6 text-sm sm:text-xl tracking-wide"> <!--A passionate software development enthusiast with a strong interest in
           Web Development, User Interface (UI) & User Experience (UX) Design and Data Visualisation. Constantly driven
           to learn new technologies and hone his programming skills to bring innovative ideas to life. <br/> -->
             This portfolio showcases Rahul's projects, where you'll see his problem-solving approach and ability to
@@ -59,12 +60,12 @@
             environments and
             enjoys tackling challenges head-on.</p>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
     <!-- Projects featured section -->
-    <div class="m-0 py-2 sm:py-5 h-full sm:min-h-full">
-      <div id="project-bg" class="sm:p-4 py-4 overflow-hidden flex flex-col sm:flex-row justify-around">
+    <section class="m-0 py-2 sm:py-5 h-full sm:min-h-full">
+      <article id="project-bg" class="sm:p-4 py-4 overflow-hidden flex flex-col sm:flex-row justify-around">
         <div
           class="cards fade-on-scroll mx-2 my-4 sm:m-2 sm:min-h-[360px] flex bg-opacity-50 rounded-2xl basis-4/12 sm:basis-4/12 grow-0">
           <figure class="cards-fig">
@@ -107,97 +108,102 @@
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
     <!-- Skillset -->
-    <div
-      class="skills flex w-full h-full sm:min-h-full mb-6 sm:my-9 sm:px-2 px-4 py-5 bg-white sm:place-content-center bg-opacity-25">
-      <div class="flex flex-col flex-nowrap pb-2 sm:pb-6 sm:px-4 w-10/12 sm:w-6/12 bg-transparent rounded-xl">
+    <section
+      class="skills flex w-full h-full sm:min-h-full mb-6 sm:my-9 sm:px-2 p-2 sm:place-content-center bg-opacity-25">
+      <article class="flex flex-col flex-nowrap pb-2 sm:pb-6 sm:px-4 bg-transparent rounded-xl">
         <h2
-          class="fade-on-scroll mr-auto ml-auto p-2 sm:p-4 text-xl sm:text-2xl font-bold sm:tracking-wide uppercase underline underline-offset-4">
+          class="fade-on-scroll mr-auto ml-auto p-2 sm:p-4 text-xl sm:text-3xl font-bold sm:tracking-wide uppercase underline underline-offset-4">
           Technical Skills</h2>
-        <div>
-          <h3
-            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-base tracking-wide">
-            <span class="underline underline-offset-4">Front-End Development</span> | <span
-              class="text-base no-underline uppercase font-semibold">HTML . CSS .
-              Tailwind . bootstrap </span>
-          </h3>
-          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
-            Proficient in HTML5, CSS (bootstrap, tailwind), and JavaScript
-            for building user interfaces and interactive web experiences.
-          </p>
-          <h3
-            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-base tracking-wide">
-            <span class="underline underline-offset-4">Back-End Development</span> | <span
-              class="text-base no-underline uppercase font-semibold">React.js . Node.js . php </span>
-          </h3>
-          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
-            Possessing a strong foundation in backend development principles and eager to learn and grow.
-          </p>
-          <h3
-            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-base tracking-wide">
-            <span class="underline underline-offset-4">Programming Languages</span> | <span
-              class="text-base no-underline uppercase font-semibold">C/C++ . Java .
-              Python</span>
-          </h3>
-          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
-            Strong understanding of programming fundamentals with experience in object-oriented (Java) and
-            procedural (C) programming languages, allowing for efficient problem-solving and code maintainability.
-          </p>
-          <h3
-            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-base tracking-wide">
-            <span class="underline underline-offset-4">Database Management</span> | <span
-              class="text-base no-underline uppercase font-semibold">DBMS . SQL</span>
-          </h3>
-          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">
-            Possess a strong working knowledge of database design principles, data modeling, and querying using SQL.
-          </p>
-          <h3
-            class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-base tracking-wide">
-            <span class="underline underline-offset-4">Version Control</span> | <span
-              class="text-base no-underline uppercase font-semibold">Git . Github</span>
-          </h3>
-          <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide"> Experience
-            with Git for
-            version control,
-            collaboration and code management, including branching, merging, and
-            conflict resolution.
-          </p>
+        <div class="skills-grid grid gap-4 sm:gap-6">
+          <article class="skills-grid-element">
+            <h3
+              class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+              <span class="underline underline-offset-4">Front-End Development</span> | <span
+                class="text-base no-underline uppercase font-semibold">HTML . CSS .
+                Tailwind . bootstrap </span>
+            </h3>
+            <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">Proficient in HTML5,
+              CSS (bootstrap, tailwind), and JavaScript
+              for building user interfaces and interactive web experiences.</p>
+          </article>
+          <article class="skills-grid-element">
+            <h3
+              class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+              <span class="underline underline-offset-4">Back-End Development</span> | <span
+                class="text-base no-underline uppercase font-semibold">React.js . Node.js . php </span>
+            </h3>
+            <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide">Possessing a strong
+              foundation in backend development principles and eager to learn and grow.</p>
+          </article>
+          <article class="skills-grid-element">
+            <h3
+              class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+              <span class="underline underline-offset-4">Programming Languages</span> | <span
+                class="text-base no-underline uppercase font-semibold">C/C++ . Java .
+                Python</span>
+            </h3>
+            <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide"> Strong understanding
+              of programming fundamentals with experience in object-oriented (Java) and
+              procedural (C) programming languages, allowing for efficient problem-solving and code maintainability.</p>
+          </article>
+          <article class="skills-grid-element">
+            <h3
+              class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+              <span class="underline underline-offset-4">Database Management</span> | <span
+                class="text-base no-underline uppercase font-semibold">DBMS . SQL</span>
+            </h3>
+            <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide"> Possess a strong
+              working knowledge of database design principles, data modeling, and querying using SQL.</p>
+          </article>
+          <article class="skills-grid-element">
+            <h3
+              class="fade-delay fade-on-scroll p-1 sm:px-2 sm:py-1 uppercase font-bold font-sans sm:text-xl text-lg tracking-wide">
+              <span class="underline underline-offset-4">Version Control</span> | <span
+                class="text-base no-underline uppercase font-semibold">Git . Github</span>
+            </h3>
+            <p class="fade-delay fade-on-scroll px-1 sm:px-2 sm:text-base text-sm tracking-wide"> Experience
+              with Git forversion control, collaboration and code management, including branching, merging, and conflict
+              resolution.</p>
+          </article>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
     <!-- Work Experience -->
 
     <!-- Educational Qualifications section -->
-    <div class="grid bg-gray text-white px-4 pt-2 sm:pt-4 pb-4 sm:pb-8 place-content-center mx-0">
-      <h2
-        class="fade-on-scroll p-2 sm:p-2 text-xl sm:text-2xl font-semibold underline underline-offset-4 tracking-wide uppercase">
+    <section
+      class="flex flex-col education max-w-full text-base-200 px-4 py-8 sm:p-8 sm:place-items-center gap-2 sm:gap-4">
+      <h2 class="block fade-on-scroll text-xl sm:text-3xl font-semibold underline underline-offset-4 tracking-wide uppercase">
         Educational Qualifications
       </h2>
-      <div class="fade-delay p-1 m-1 fade-on-scroll">
-        <p class="px-2 text-base sm:text-xl font-medium">
-          University of Calicut
-        </p>
-        <p class="px-2 py-0 text-sm sm:text-lg font-sans">
-          Bachelor of Science, Mathematics
-          <span class="flex clear-left text-xs sm:text-sm text-white/75">2020 - 2023</span>
-        </p>
-      </div>
-      <div class="fade-delay p-1 m-1 fade-on-scroll">
-        <p class="px-2 text-base sm:text-xl font-medium">
-          University of Calicut
-        </p>
-        <p class="px-2 py-0 text-sm sm:text-lg font-sans">
-          Master of Computer Applications, IT
-          <span class="flex clear-left text-xs sm:text-sm text-white/75">2023 - present</span>
-        </p>
-      </div>
-    </div>
+      <article class="education-grid grid md:grid-cols-2 grid-cols-1 place-content-center gap-2">
+        <div class="fade-delay p-2 sm:p-4 fade-on-scroll bg-black/20 rounded-md">
+          <p class="px-2 text-base sm:text-xl font-medium">
+            University of Calicut
+          </p>
+          <p class="px-2 py-0 text-sm sm:text-lg font-sans">
+            Bachelor of Science, Mathematics
+            <span class="flex clear-left text-xs sm:text-sm text-white/75">2020 - 2023</span>
+          </p>
+        </div>
+        <div class="fade-delay p-2 sm:p-4 fade-on-scroll bg-black/20 rounded-md">
+          <p class="px-2 text-base sm:text-xl font-medium">
+            University of Calicut
+          </p>
+          <p class="px-2 py-0 text-sm sm:text-lg font-sans">
+            Master of Computer Applications, IT
+            <span class="flex clear-left text-xs sm:text-sm text-white/75">2023 - present</span>
+          </p>
+        </div>
+      </article>
+    </section>
 
     <!-- Contacts section -->
-    <div
+    <section
       class="contacts flex bottom-0 px-1 sm:px-4 py-3 sm:py-4 flex-row flex-nowrap align-middle justify-evenly sm:gap-2">
       <h2 id="contact"
         class="p-2 sm:text-xl text-base font-semibold underline underline-offset-4 sm:tracking-wide uppercase clear-right">
@@ -209,25 +215,17 @@
       <a href="https://www.linkedin.com/in/rahulmurali852/" target="_blank" rel="noopener noreferrer">
         <div class="icons8-linkedin"></div>
       </a>
-      <a href="https://www.instagram.com/crescent.rahul/ " target="_blank" rel="noopener noreferrer">
-        <div class="icons8-instagram"></div>
-      </a>
       <a href="https://discord.com/invite/Sd3KQMMGtb" target="_blank" rel="noopener noreferrer">
         <div class="icons8-discord"></div>
       </a>
       <a href="https://github.com/visrm/" target="_blank" rel="noopener noreferrer">
         <div class="icons8-github"></div>
       </a>
-      <a href="https://pinterest.com/vyali09/" target="_blank" rel="noopener noreferrer">
-        <div class="icons8-pinterest"></div>
-      </a>
-    </div>
-
-    <!--footer-->
-    <div class="flex w-full py-1 bottom-0 bg-gray text-white">
-      <p class="block mr-auto ml-auto">© Copyright 2024 Rahul Murali</p>
-    </div>
-  </main>
+    </section>
+  </main> <!--footer-->
+  <footer class="flex w-full py-1 bottom-0 text-base-200">
+    <p class="block mr-auto ml-auto">© Copyright 2024 Rahul Murali</p>
+  </footer>
 </body>
 
 </html>
