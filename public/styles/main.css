@@ -8,15 +8,8 @@ body {
   position: relative;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-color: hsla(240, 10%, 4%, 0.902);
+  background-color: hsla(240, 10%, 4%);
   z-index: -2;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 p {
@@ -118,7 +111,6 @@ header {
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  font-family: "Manrope", sans-serif;
   font-weight: 600;
   background-color: hsl(240, 4%, 46%, 0.05);
   -webkit-box-shadow: 10px 5px 24px -5px #000000;
@@ -289,7 +281,7 @@ header {
 }
 
 .skills-grid-element {
-  background-color: hsla(0, 0%, 0%, 0.2);
+  background-color: hsla(0, 0%, 100%, 0.05);
   border-radius: 0.75rem;
   padding: 1rem;
 }
@@ -298,7 +290,7 @@ header {
   padding-block: 0.5rem;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 30em) {
   .skills-grid {
     grid-template-areas:
       "skill1 skill2"
@@ -319,7 +311,6 @@ header {
   text-decoration: none;
   color: #000000;
   background-color: #616161;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .icons8-linkedin {
